@@ -37,5 +37,4 @@ object AppModule {
             .client(okHttpClient())
             .build()
             .create(NewsService::class.java)
-
 }

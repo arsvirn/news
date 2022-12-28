@@ -22,7 +22,7 @@
         android:id="@+id/detailFragment"
         android:name="com.example.news.ui.details.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.example.news.ui.favorite.FavoriteFragment"

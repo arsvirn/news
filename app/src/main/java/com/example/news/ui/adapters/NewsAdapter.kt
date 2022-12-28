@@ -21,7 +21,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         }
 
         override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
-            return oldItem == newItem
+            return  oldItem == newItem
         }
     }
 
@@ -39,7 +39,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
             Glide.with(this).load(article.urlToImage).into(article_image)
             article_image.clipToOutline = true
             article_title.text = article.title
-            article_data.text = article.publishedAt
+            article_date.text = article.publishedAt
         }
     }
 

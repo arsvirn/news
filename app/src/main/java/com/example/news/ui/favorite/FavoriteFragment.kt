@@ -5,11 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.news.R
-import com.example.news.databinding.FragmentDetailBinding
 import com.example.news.databinding.FragmentFavoriteBinding
 
 class FavoriteFragment : Fragment() {
+
     private var _binding: FragmentFavoriteBinding? = null
     private val mBinding get() = _binding!!
 

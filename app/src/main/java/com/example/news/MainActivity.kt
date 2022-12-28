@@ -2,9 +2,6 @@ package com.example.news
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.news.databinding.ActivityMainBinding
@@ -14,6 +11,7 @@ import kotlinx.coroutines.*
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
     private var _binding: ActivityMainBinding? = null
     private val mBinding get() = _binding!!
 
