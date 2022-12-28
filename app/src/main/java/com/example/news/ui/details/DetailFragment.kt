@@ -9,6 +9,7 @@ import com.example.news.R
 import com.example.news.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
+
     private var _binding: FragmentDetailBinding? = null
     private val mBinding get() = _binding!!
 

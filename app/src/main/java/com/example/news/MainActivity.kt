@@ -8,26 +8,30 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.news.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.*
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
     private val mBinding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.fragment_splash)
-        Handler(Looper.myLooper()!!).postDelayed({
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(5000)
+            _binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(mBinding.root)
             bottom_nav_menu.setupWithNavController(
                 navController = nav_host_fragment.findNavController()
             )
-        }, 5000)
+        }
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        _binding
+        _binding = null
     }
 }

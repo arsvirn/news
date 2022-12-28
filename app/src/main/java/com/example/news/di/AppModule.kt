@@ -1,6 +1,7 @@
 package com.example.news.di
 
 import com.example.news.data.api.NewsService
+import com.example.news.utils.Constants.Companion.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +15,9 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    fun baseUrl() = BASE_URL
 
     @Provides
     fun logging() = HttpLoggingInterceptor()
